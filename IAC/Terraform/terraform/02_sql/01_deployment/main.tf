@@ -71,7 +71,7 @@ resource "azurerm_sql_database" "catalogdb" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   server_name         = azurerm_sql_server.sqlserver.name
-  edition             = "Basic"
+  edition             = "Standard"
   tags                = { env : var.env }
 }
 
@@ -80,6 +80,6 @@ resource "azurerm_sql_database" "identitydb" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   server_name         = azurerm_sql_server.sqlserver.name
-  edition             = "Basic"
+  edition             = "Standard"
   tags                = { env : var.env }
 }
